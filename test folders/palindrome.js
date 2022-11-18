@@ -10,8 +10,7 @@
 const palindrome = (str) => {
 
     // EDGE CASES
-    if (!str) return '';
-    if (str.length === 1) return true
+    if (str.length <= 1) return true
 
     if (str[0] === str[str.length -1]) {
         return palindrome(str.slice(1, -1).trim())
@@ -21,9 +20,9 @@ const palindrome = (str) => {
 
 }
 
-console.log(palindrome('')) // ''
 console.log(palindrome('tony')) // false
 console.log(palindrome('race car')) // true
 console.log(palindrome('monkey')) // false
-console.log(palindrome('moom')) // true
+console.log(palindrome('tacocat')) // true
+console.log(palindrome('noon')) // true
 console.log(palindrome('sos')) // true

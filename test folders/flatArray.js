@@ -8,7 +8,7 @@
 
 const flatTheArray = (arr) => {
 
-    if (!str) return 'teka lang beh'
+    if (!arr) return 'teka lang beh'
 
     let newArr = []
 
@@ -16,6 +16,8 @@ const flatTheArray = (arr) => {
         if(typeof i === 'number'){
             newArr.push(i)
         } else {
+            console.log(`Loops: ${i}:`, newArr)
+            newArr = newArr.concat(flatTheArray(i))
 
         }
     }
