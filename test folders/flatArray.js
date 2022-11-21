@@ -8,7 +8,7 @@
 
 const flatTheArray = (arr) => {
 
-    if (!arr) return 'teka lang beh'
+    if (!arr) return;
 
     let newArr = []
 
@@ -16,7 +16,6 @@ const flatTheArray = (arr) => {
         if(typeof i === 'number'){
             newArr.push(i)
         } else {
-            console.log(`Loops: ${i}:`, newArr)
             newArr = newArr.concat(flatTheArray(i))
 
         }
@@ -25,7 +24,7 @@ const flatTheArray = (arr) => {
 
 }
 
-// console.log(flatTheArray([1, 2, 3, [4, 5] ])) // [1, 2, 3, 4, 5]
-// console.log(flatTheArray([1, [2, [3, 4], [[5]]]])) // [1, 2, 3, 4, 5]
-// console.log(flatTheArray([[1],[2],[3]])) // [1,2,3]
+console.log(flatTheArray([1, 2, 3, [4, 5] ])) // [1, 2, 3, 4, 5]
+console.log(flatTheArray([1, [2, [3, 4], [[5]]]])) // [1, 2, 3, 4, 5]
+console.log(flatTheArray([[1],[2],[3]])) // [1,2,3]
 console.log(flatTheArray([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])) // [1,2,3]
