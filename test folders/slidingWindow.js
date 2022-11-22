@@ -46,17 +46,8 @@ Please write in time complexity of O(n)
 const longestSubstringInString = (str) => {
     
     let i = 0
-    let counter = 1;
+    let counter = 0;
     
-    for (let j = 1; j < str.length; j++){
-        if (str[i] !== str[j]){
-            i++
-            counter++
-        } else {
-            str[i] = str[j]
-        }
-    } 
-    return counter;
     
 }
 // Test Cases:

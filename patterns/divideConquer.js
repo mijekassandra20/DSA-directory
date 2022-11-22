@@ -40,26 +40,3 @@ const binarySearch = (arr, target) => {
 // Problem 3: Binary search using recursion
 
 const nums = [-1, 0, 3, 5, 9, 12]
-
-const binarySearchRecursive = (arr, target, start = 0, end = arr.length - 1) => {
-
-    // edge case
-    if (start > end) return -1
-
-    // find middle index
-    let middleIndex = Math.floor((start + end) / 2);
-
-    // if the middle element is the target, if so, return the target index
-
-    if (arr[middleIndex] === target) return middleIndex; // base condition
-
-    // if the middle element is smaller than target , move the start index to middle + 1
-
-    if (arr[middleIndex] < target) {
-        return binarySearchRecursive(arr, target, middleIndex + 1, max)
-    } else {
-        return binarySearchRecursive(arr, target, min, middleIndex - 1)
-    }
-}
-
-console.log(binarySearchRecursive(nums))
