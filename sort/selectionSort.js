@@ -26,3 +26,5 @@ const selectionSort = (arr) => {
 
     return arr; 
 }
+
+console.log(selectionSort([5,2,6,3,1]))

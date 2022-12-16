@@ -1,5 +1,3 @@
-const arr = [8, 1, 2, 4, 6, 3, 5]
-
 // 1. Start looping from with a variable called i the end of the array towards the beginning
 
 // 2. Start an inner loop with a variable called j from the beginning until i - 1
@@ -8,9 +6,11 @@ const arr = [8, 1, 2, 4, 6, 3, 5]
 
 // 4. Return the sorted array!
 
+const arr = [8, 1, 2, 4, 6, 3, 5]
+
 const bubbleSort = (arr) => {
     // indicate if swaps happened or not
-    let noSwap; 
+    let noSwaps; 
 
     //Start looping from with a variable called i the end of the array towards the beginning
 
@@ -30,4 +30,6 @@ const bubbleSort = (arr) => {
         if (noSwaps) break
     }
     return arr; 
-} 
+}
+
+console.log(bubbleSort(arr))

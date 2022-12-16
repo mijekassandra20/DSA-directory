@@ -28,7 +28,6 @@ const same = (arr1, arr2) => {
         // check the values
         if(frequencyCounter1[key] !== frequencyCounter2[key * key]) return false
 
-
     }
 
     return true
